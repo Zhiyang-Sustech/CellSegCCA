@@ -151,6 +151,8 @@ After segmentated and annotated, the output masks are needed to be transformed f
 Transform2LCM.py is prepared for transformation, set the path of masks and run the code, the transformation would be finished soon.
 The output XML files stored dissection trajectory could be imported into laser microdissection system and guide dissection task.
 
-Examples:
-![](/example/LMD_import.png)
+Examples (XML file, images before and after trajectory import):
+- CCA
+![](/example/example_CCA_before_import.JPG)
+![](/example/example_CCA_after_import.JPG)
 
