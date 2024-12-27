@@ -45,7 +45,7 @@ Before running the code, all images must be divided into training and validation
   DETECTION_MAX_INSTANCES
   DETECTION_NMS_THRESHOLD
 
-2. Run main.py
+2. Run main_train.py
 
 The trained model will be output in floder 'logs' as an h5 file, along with the loss during training.
 
