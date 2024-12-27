@@ -84,7 +84,7 @@ The binary classification and masks are only used for evaluation and are not req
   DETECTION_NMS_THRESHOLD
   DETECTION_MAX_INSTANCES
 
-2. Run main.py
+2. Run main_test.py
 
 The results include annotated overlay images and masks.
 
