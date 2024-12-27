@@ -172,12 +172,17 @@ class CTaskTestSegModel:
                 overlay_list = []
                 area_save = 0
                 area_list = []
-                area_wanted = self.config.AREA_WANTED
-                trans_pixel = self.config.TRANS_PIXEL
-                Use_Spilt = self.config.USE_SPILT
-                area_wanted_pixel = area_wanted * trans_pixel
-                block_resize = self.config.BLOCK_RESIZE
+                #area_wanted = self.config.AREA_WANTED
+                #trans_pixel = self.config.TRANS_PIXEL
+                #Use_Spilt = self.config.USE_SPILT
+                #area_wanted_pixel = area_wanted * trans_pixel
+                #block_resize = self.config.BLOCK_RESIZE
                 small_image_count = 0
+
+                #测试用功能，直接关闭
+                Use_Spilt = False
+                area_wanted = 0
+                
 
 
 
