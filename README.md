@@ -1,5 +1,6 @@
 # π-CellSeg-CCA
 π-CellSeg-CCA is a pathological image analysis algorithm based on Mask R-CNN and ResNet-18, to enable automated annotation of CCA and normal bile ducts regions for LMD.
+π-CellSeg-CCA comprised a segmentation model and a classification model. Mask R-CNN with a discrete cosine transform (DCT) module integrated into the segmentation branch, termed Mask R-CNN-DCT, was employed in the segmentation task. For classification task, classic deep learning network ResNet-18 trained with the predictions of Mask R-CNN-DCT was applied to classify and predict normal and cancer cell clusters. 
 
 ## Running the code
 
@@ -48,7 +49,7 @@ Before running the code, all images must be divided into training and validation
 
 The trained model will be output in floder 'logs' as an h5 file, along with the loss during training.
 
-Examples:
+Examples (the loss during training):
 ![](/example/seg_loss.png)
 
 #### Test
@@ -87,7 +88,7 @@ The binary classification and masks are only used for evaluation and are not req
 
 The results include annotated overlay images and masks.
 
-Examples:
+Examples (annotated overlay images and masks segmented by Mask R-CNN and improved Mask R-CNN-DCT):
 ![](/example/seg_example.png)
 
 ### Classfication
@@ -95,7 +96,8 @@ Examples:
 All CCA/normal bile ducts cell clusters in annotated images must be extract to little patches first.
 Set "is_preprocess = 1, is_train = 0" in cells_classification.py, the results output by segmentation model can be extract into little patches, each patch contains one CCA/normal BD cell cluster.
 
-Examples:
+Examples (extracted little patches):
+
 ![](/example/patch_example.png)
 
 #### Training
@@ -119,8 +121,10 @@ Before training, all images must be divided into training and validation set, th
 
 The trained model will be output as an pth file, along with the loss on training and validation set and the accuracy on validation set.
 
-Examples:
+Examples (the loss on training, validation set and the accuracy on validation set):
+
 ![](/example/class_train_loss.png)
+
 ![](/example/class_val_acc.png)
 
 #### Test
@@ -144,6 +148,7 @@ The binary classification are only used for evaluation and are not required in t
 The results, including predictions and positive probability, will be output in tables.
 
 Examples (patches and corresponding positive probability):
+
 ![](/example/class_example.png)
 
 ### Transform to XML files
@@ -152,7 +157,19 @@ Transform2LCM.py is prepared for transformation, set the path of masks and run t
 The output XML files stored dissection trajectory could be imported into laser microdissection system and guide dissection task.
 
 Examples (XML file, images before and after trajectory import):
+
 - CCA
+
+[XML file](/example/example_CCA_XML.xml)
+
 ![](/example/example_CCA_before_import.JPG)
+
 ![](/example/example_CCA_after_import.JPG)
 
+- Normal BD
+
+[XML file](/example/example_NormalBD_XML.xml)
+
+![](/example/example_NormalBD_before_import.JPG)
+
+![](/example/example_NormalBD_after_import.JPG)
