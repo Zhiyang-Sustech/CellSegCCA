@@ -47,6 +47,8 @@ Before running the code, all images must be divided into training and validation
 2. Run main.py
 
 The trained model will be output in floder 'logs' as an h5 file, along with the loss during training.
+
+Examples:
 ![](/example/seg_loss.png)
 
 #### Test
@@ -85,6 +87,7 @@ The binary classification and masks are only used for evaluation and are not req
 
 The results include annotated overlay images and masks.
 
+Examples:
 ![](/example/seg_example.png)
 
 ### Classfication
@@ -92,6 +95,7 @@ The results include annotated overlay images and masks.
 All CCA/normal bile ducts cell clusters in annotated images must be extract to little patches first.
 Set "is_preprocess = 1, is_train = 0" in cells_classification.py, the results output by segmentation model can be extract into little patches, each patch contains one CCA/normal BD cell cluster.
 
+Examples:
 ![](/example/patch_example.png)
 
 #### Training
@@ -115,8 +119,9 @@ Before training, all images must be divided into training and validation set, th
 
 The trained model will be output as an pth file, along with the loss on training and validation set and the accuracy on validation set.
 
+Examples:
 ![](/example/class_train_loss.png)
-
+![](/example/class_val_acc.png)
 
 #### Test
 ##### Data Format
@@ -138,10 +143,14 @@ The binary classification are only used for evaluation and are not required in t
 
 The results, including predictions and positive probability, will be output in tables.
 
+Examples (patches and corresponding positive probability):
+![](/example/class_example.png)
+
 ### Transform to XML files
 After segmentated and annotated, the output masks are needed to be transformed for subsequent laser microdissection
 Transform2LCM.py is prepared for transformation, set the path of masks and run the code, the transformation would be finished soon.
 The output XML files stored dissection trajectory could be imported into laser microdissection system and guide dissection task.
-  
+
+Examples:
 ![](/example/LMD_import.png)
 
