@@ -1,6 +1,9 @@
 # π-CellSeg-CCA
 π-CellSeg-CCA is a pathological image analysis algorithm based on Mask R-CNN and ResNet-18, to enable automated annotation of CCA and normal bile ducts regions for LMD.
-π-CellSeg-CCA comprised a segmentation model and a classification model. Mask R-CNN with a discrete cosine transform (DCT) module integrated into the segmentation branch, termed Mask R-CNN-DCT, was employed in the segmentation task. For classification task, classic deep learning network ResNet-18 trained with the predictions of Mask R-CNN-DCT was applied to classify and predict normal and cancer cell clusters. 
+π-CellSeg-CCA comprised a segmentation model and a classification model. Mask R-CNN with a discrete cosine transform (DCT) module integrated into the segmentation branch, termed Mask R-CNN-DCT, was employed in the segmentation task. The Mask R-CNN-DCT comprised three parts: backbone with feature pyramid network, region proposal network and head. The DCT module enabled exporting high-resolution masks with vectors without increasing model complexity.
+For classification task, classic deep learning network ResNet-18 trained with the predictions of Mask R-CNN-DCT was applied to classify and predict normal and cancer cell clusters. 
+After segmentation and classification, a file stored the dissection trajectory of cell cluster is exported to guide the LMD process. It takes 2-5 minutes (depending on the computer) for π-CellSeg-CCA to analyze a H&E-stained slide image, segmenting CCA cell clusters and normal bile duct cell clusters and providing the probability of malignancy.
+
 
 ## Hardware and software
 The type/version of main hardware and software used in training and testing are list as followed:
