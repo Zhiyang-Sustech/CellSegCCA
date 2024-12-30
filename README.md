@@ -6,14 +6,23 @@
 The type/version of main hardware and software used in training and testing are list as followed:
 
 OS: Windows10
+
 CPU: Intel(R)-2.10GHz
+
 GPU: NVIDIA GeForce RTX3090 24GB
+
 RAM: 128GB
+
 Python: 3.6.8
+
 Tensorflow-gpu: 2.6.0
+
 numpy: 1.19.5
+
 matplotlib: 3.3.4
+
 h5py: 3.1.0
+
 
 
 
