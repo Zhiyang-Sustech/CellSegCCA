@@ -41,7 +41,7 @@ import scipy.io
 import CFunctionCompetitionResult as f
 from CFunctionUtils import resize
 
-import SplitAndMergePic
+
 
 class CTaskLoadData:
     def work(self):
